@@ -1,50 +1,58 @@
-VEUT - Voice enabled upi transactions
+VEUT - Voice Enabled UPI Transactions
 
-VoiceUPI is an accessibility and security-focused wrapper built to assist **elderly and low-literacy users** in performing safe UPI transactions using **voice commands** and **gesture/biometric confirmations**. It connects to existing UPI apps like BHIM, PhonePe, or Paytm — acting as a trusted, voice-first assistant layer.
+**VoiceUPI** is a secure and accessible wrapper that allows **elderly users** to perform UPI transactions using only **voice and fingerprint**. No typing. No app-hopping confusion. Just speak, confirm, and pay.
+
+This project acts as a **voice-first payment layer** that connects with any UPI app (PhonePe, GPay, BHIM) and automates the user’s journey all the way to the final UPI page — with **security confirmations** and **biometric UPI PIN entry**.
 
 ---
 
-## 🧩 Features
+## 🧠 How It Works (Flow)
 
-### 1️⃣ Voice Capture
-- Multilingual voice input using Android’s SpeechRecognizer API
-- Continuous or push-to-talk mode
-- Converts commands like:  
-  `"Send ₹1000 to Ramesh"`
+1. **User speaks**:  
+   > "Pay ₹500 electricity bill"  
+   > or  
+   > "Send ₹2000 to Ramesh"
 
-### 2️⃣ Intent Extraction
-- Lightweight NLP to parse `amount`, `recipient`, and `action`
-- Supports:
-  - `send_money`
-  - `check_balance`
-  - `report_fraud`
-  - `cancel_transaction`
+2. **VoiceUPI parses the intent**, identifies:
+   - Action (send/pay)
+   - Amount
+   - Recipient or bill type
 
-### 3️⃣ Assistant Replies
-- Text-to-speech feedback in user's regional language
-- Examples:
-  - `"You are sending ₹1000 to Ramesh. Tap and hold to confirm."`
-  - `"This contact is not verified. Transaction blocked for safety."`
+3. **Assistant confirms**:  
+   > “You are sending ₹500 to the Electricity Board. Should I continue?”
 
-### 4️⃣ Biometric + Gesture Confirmation
-- Uses device fingerprint API or screen tap-and-hold gesture to approve transactions
-- Protects against accidental or fraudulent actions
+4. **User says**: “Yes” ✅
 
-### 5️⃣ SOS Safety Layer
-- If amount > ₹X (e.g. ₹5000), alert family via SMS or push notification
-- VoiceUPI pauses and says:
-  > `"This is a high-value payment. Shall I alert your family?"`
+5. **VoiceUPI opens the target UPI app** using **deep link**:
+   - UPI ID prefilled
+   - Amount set
+   - Notes optional
 
-### 6️⃣ Frontend
-- Built in Kotlin (for Android)
-- Large buttons, minimal text, and full voice guidance
-- Dark mode and accessibility font support
+6. **Fingerprint matched** (optional):
+   - If correct: auto-enter UPI PIN 🔐
+   - If not: fallback to manual entry
 
-### 7️⃣ Integration with UPI Apps
-- Works with:
-  - BHIM, PhonePe, GPay, Paytm (via deep links)
-- Example:
+---
+
+## 🔑 Core Features
+
+### 🎤 1. Voice Command Recognition
+- Converts speech to intent (amount + recipient or biller)
+- Supports regional languages (Hindi, Tamil, Bengali, more)
+
+### 🧠 2. Command Parsing & Intent Extraction
+- Detects:
+  - Transaction type (send/pay/bill)
+  - Amount
+  - Target UPI ID (from verified list or shopping app)
+
+### 🗣️ 3. Spoken Confirmation
+- Speaks out transaction details to avoid mistakes
+- Confirms with a simple “Yes” or “No”
+
+### 🔗 4. UPI App Deep Linking
+- Opens apps like PhonePe/GPay/BHIM with pre-filled details:
 ```kotlin
-val intent = Intent(Intent.ACTION_VIEW)
-intent.data = Uri.parse("upi://pay?pa=ram@upi&pn=Ramesh&am=1000")
+val uri = Uri.parse("upi://pay?pa=powerboard@upi&pn=ElectricityBoard&am=500")
+val intent = Intent(Intent.ACTION_VIEW, uri)
 startActivity(intent)
