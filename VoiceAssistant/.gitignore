@@ -61,15 +61,19 @@ voicepay_memory/
 .DS_Store
 Thumbs.db
 
-# Documentation (now consolidated)
-*.md
-!README.md
+# Unnecessary documentation files (consolidated into main README)
+ANDROID_INTEGRATION.md
+TRANSFORMATION_SUMMARY.md
+VoiceAssistant/README.md
 
 # Backup and temporary files
 *.old
 *.backup
 *_backup.*
 *_old.*
+*_new.*
+tools_voicepay.py
+manage_new.py
 *.egg
 MANIFEST
 
