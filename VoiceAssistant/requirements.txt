@@ -1,10 +1,24 @@
-livekit-agents
+# Core LiveKit and AI dependencies
+livekit-agents>=0.8.0
 livekit-plugins-openai
 livekit-plugins-silero
 livekit-plugins-google
 livekit-plugins-noise-cancellation
-mem0ai
-duckduckgo-search
-langchain_community
-requests
+google-generativeai
+
+# Essential Python packages
 python-dotenv
+requests
+psutil
+asyncio
+
+# VoicePay real-time Android integration
+adb-shell
+pure-python-adb
+
+# Voice and audio processing
+speech-recognition
+pydub
+
+# Utilities
+regex
