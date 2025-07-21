@@ -1,0 +1,34 @@
+# Android/Gradle Build
+Android_App/build/
+Android_App/app/build/
+Android_App/.gradle/
+Android_App/local.properties
+Android_App/gradlew
+Android_App/gradlew.bat
+Android_App/gradle/wrapper/gradle-wrapper.jar
+
+# IDE Files
+Android_App/.idea/
+Android_App/.vscode/
+Android_App/*.iml
+Android_App/.externalNativeBuild/
+Android_App/.cxx/
+
+# Android Generated Files
+Android_App/app/build/
+Android_App/app/release/
+Android_App/app/debug/
+Android_App/captures/
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Other
+*.log
+*.tmp

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Exclude sensitive payment data from backup -->
+    <exclude domain="database" />
+    <exclude domain="sharedpref" path="sensitive_data.xml" />
+    <exclude domain="file" path="transactions/" />
+</full-backup-content>

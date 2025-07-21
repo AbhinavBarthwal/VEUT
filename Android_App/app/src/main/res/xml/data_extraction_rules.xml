@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Exclude sensitive payment data from cloud backup -->
+        <exclude domain="database" />
+        <exclude domain="sharedpref" path="sensitive_data.xml" />
+        <exclude domain="file" path="transactions/" />
+    </cloud-backup>
+    
+    <device-transfer>
+        <!-- Allow basic app data transfer but exclude sensitive payment info -->
+        <exclude domain="database" />
+        <exclude domain="sharedpref" path="sensitive_data.xml" />
+        <exclude domain="file" path="transactions/" />
+    </device-transfer>
+</data-extraction-rules>

@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">VoicePay</string>
+    
+    <!-- Main Activity -->
+    <string name="voice_input_hint">Tap and speak your payment command</string>
+    <string name="help_text">Try saying:\n\n• "Pay 500 rupees to john@paytm"\n• "Send 1000 to 9876543210@ybl"\n• "Check my UPI apps"\n• "Help me with payments"</string>
+    
+    <!-- Status Messages -->
+    <string name="initializing">Initializing VoicePay...</string>
+    <string name="ready">Ready for voice commands</string>
+    <string name="listening">Listening... Please speak</string>
+    <string name="processing">Processing your command...</string>
+    <string name="error_microphone">Microphone permission required</string>
+    <string name="error_speech_recognition">Speech recognition not available</string>
+    
+    <!-- UPI Messages -->
+    <string name="no_upi_apps">No UPI apps found. Please install PhonePe, Google Pay, or another UPI app.</string>
+    <string name="upi_apps_found">UPI apps available for payments</string>
+    <string name="payment_initiated">Payment initiated. Complete in your UPI app.</string>
+    <string name="payment_failed">Payment failed. Please try again.</string>
+    
+    <!-- British Butler Responses -->
+    <string name="greeting_1">Good day! I\'m your VoicePay butler, ready to assist.</string>
+    <string name="greeting_2">Hello there! How may I help with your payments today?</string>
+    <string name="greeting_3">Greetings! I\'m here to make your UPI transactions simple.</string>
+    
+    <!-- Security Messages -->
+    <string name="session_expired">Your session has expired for security. Please start fresh.</string>
+    <string name="transaction_cancelled">Transaction cancelled. How else may I assist?</string>
+    <string name="secure_payment">Your payment data is handled securely.</string>
+    
+    <!-- Accessibility -->
+    <string name="accessibility_mic_button">Microphone button for voice commands</string>
+    <string name="accessibility_status">Current status information</string>
+    <string name="accessibility_voice_icon">Voice input indicator</string>
+    
+    <!-- Error Messages -->
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_upi_app">UPI app error. Please try a different app.</string>
+    <string name="error_invalid_amount">Invalid amount. Please specify a valid payment amount.</string>
+    <string name="error_invalid_upi_id">Invalid UPI ID. Please check the format.</string>
+    
+    <!-- Confirmation Messages -->
+    <string name="confirm_payment">Confirm payment of ₹%1$d to %2$s?</string>
+    <string name="payment_confirmed">Payment confirmed and initiated.</string>
+    <string name="payment_declined">Payment cancelled at your request.</string>
+    
+    <!-- Help Content -->
+    <string name="help_title">VoicePay Help</string>
+    <string name="help_payment_commands">Payment Commands:\n• "Pay [amount] to [UPI ID]"\n• "Send [amount] rupees to [UPI ID]"\n• "Transfer [amount] to [phone number]"</string>
+    <string name="help_other_commands">Other Commands:\n• "Check my UPI apps"\n• "What apps do I have"\n• "Help with payments"\n• "Cancel transaction"</string>
+    
+    <!-- Permissions -->
+    <string name="permission_microphone_title">Microphone Permission</string>
+    <string name="permission_microphone_message">VoicePay needs microphone access to process your voice commands for UPI payments.</string>
+    <string name="permission_denied">Permission denied. Voice commands won\'t work without microphone access.</string>
+    
+    <!-- Button Labels -->
+    <string name="start_listening">Start Listening</string>
+    <string name="stop_listening">Stop</string>
+    <string name="try_again">Try Again</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    
+    <!-- App Description -->
+    <string name="app_description">VoicePay is your British butler assistant for secure UPI payments using voice commands. Designed for accessibility and ease of use.</string>
+</resources>
